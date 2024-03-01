@@ -1,0 +1,94 @@
+﻿<UserControl x:Class="Striletska01.HoroscopeControle"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Striletska01"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" Background="White">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" 
+               HorizontalAlignment="Center" 
+               VerticalAlignment="Center" 
+               FontFamily="CordiaUPC"
+               Text="Hi! Please enter your birth date to see your signs!" 
+               FontSize="30" 
+               Foreground="MidnightBlue" 
+               FontWeight="Bold">
+
+        </TextBlock>
+        <StackPanel x:Name="stackPanel" Grid.Row="1" Orientation="Vertical">
+            <DatePicker x:Name="DatePicker" 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" 
+                    FontSize="30" 
+                    Foreground="MidnightBlue" 
+                    FontFamily="Cooper Black"
+                    BorderBrush="MidnightBlue" 
+                        Margin="0,0,0,0" 
+
+                   />
+            <TextBlock x:Name="UserAge" 
+                   VerticalAlignment ="Center" 
+                   FontSize="30" 
+                   Foreground="MidnightBlue" 
+                   FontFamily="CordiaUPC"
+                   Margin="0,10,0,0"
+                   Height="55"
+                   Visibility="Visible" ></TextBlock>
+        </StackPanel>
+
+        <Button Grid.Row="2" 
+            x:Name="ButtonToSeeZodiacs" 
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Center" 
+            Height="50" 
+            Width="226" 
+            Content="See signs"
+            Background="MidnightBlue"
+            Foreground="AliceBlue"
+            FontFamily="CordiaUPC"
+            FontWeight="Bold"
+            FontSize="20"   
+                
+            Command="{Binding CanculateAgeCommand}"
+            >
+        </Button>
+
+        <StackPanel Grid.Row="1" Orientation="Vertical" Cursor="ScrollN" Margin="0,120,0,0" Grid.RowSpan="2">
+            <TextBlock x:Name="WesternZodiacSign"
+                   HorizontalAlignment="Right"
+                   Foreground="MidnightBlue" 
+                   FontFamily="CordiaUPC"
+                   FontSize="20" 
+                   Margin="100,25,0,50"
+                   Height="36"
+                       MinWidth="300"
+                       FontWeight="Bold"
+                       
+                       
+                   Visibility="Hidden" Width="400"/>
+            <TextBlock x:Name="ChineseZodiacSign"
+                   HorizontalAlignment="Right"
+
+                     Foreground="MidnightBlue" 
+                   FontFamily="CordiaUPC"
+                   FontSize="20" 
+                   Margin="80,0,0,0"
+                   Height="36"
+                       FontWeight="Bold"
+                       MinWidth="300"
+
+                   Visibility="Hidden" Width="400"
+            />
+        </StackPanel>
+
+    </Grid>
+</UserControl>

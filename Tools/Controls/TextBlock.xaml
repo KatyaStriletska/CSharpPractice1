@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="Striletska01.Tools.Controls.TextBlock"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Striletska01.Tools.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" Background="White">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="2"
+            x:Name="WesternZodiacSign"
+         Text="Your chinese western sign : sign  "
+         VerticalAlignment ="Center"
+         HorizontalAlignment="Right"
+         Foreground="MidnightBlue" 
+         FontFamily="CordiaUPC"
+         FontSize="20" 
+         Margin="100, 0, 87, 0"
+         Height="1000"
+       ></TextBlock>
+
+    </Grid>
+</UserControl>
