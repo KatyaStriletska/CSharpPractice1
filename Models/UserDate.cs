@@ -10,7 +10,6 @@ namespace Striletska01.Models
     {
         #region Fields
         private DateTime _birthDate;
-        private int _userAge;
         #endregion
 
         #region Properties
@@ -23,17 +22,6 @@ namespace Striletska01.Models
             set 
             { 
                 _birthDate = value; 
-            }
-        }
-        public int UserAge
-        {
-            get
-            {
-                return _userAge;
-            }
-            set 
-            {
-                _userAge = value;
             }
         }
         #endregion
